@@ -1,0 +1,20 @@
+.product-card {
+  background-color: #1e1e1e; /* negro claro */
+  border-radius: 12px;       /* bordes redondeados */
+  padding: 1rem;
+  text-align: center;        /* centra el contenido */
+  width: 250px;              /* ancho fijo opcional */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* sombra ligera */
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 12px;       /* igual que el contenedor */
+  object-fit: cover;         /* evita deformación */
+}
+
+.product-title {
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+  color: #fff;
+}

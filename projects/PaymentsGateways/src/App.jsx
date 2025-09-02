@@ -9,7 +9,7 @@ import FrontEnd from './FrontEnd.jsx'
 // main class that contains all the application logic.
 function App() {
   return (
-    <div>
+    <div className='app'>
       <div className="container">
         <h1>Payments Gateways</h1>
         <p>This is a project to learn about payment gateways.</p>
@@ -19,7 +19,7 @@ function App() {
       </div>
 
       <FrontEnd />
-      
+
     </div>
   )
 }

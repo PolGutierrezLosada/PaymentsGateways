@@ -1,0 +1,6 @@
+.products-container {
+  display: flex;           /* coloca en línea */
+  gap: 1rem;               /* separación entre productos */
+  justify-content: center; /* centra horizontalmente */
+  margin-top: 2rem;
+}
