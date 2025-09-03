@@ -8,14 +8,15 @@
 
 /* Botón del carrito */
 .cart-button {
+  position: relative; /* <-- agrega esto */
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;                /* espacio entre icono y texto */
+  gap: 8px;
   background-color: #00bfa6;
   color: #ffffff;
   border: none;
-  border-radius: 50px;     /* forma redondeada */
+  border-radius: 50px;
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: bold;
@@ -23,6 +24,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
+
 
 /* Efecto hover */
 .cart-button:hover {
@@ -44,4 +46,21 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
+}
+
+.cart-count {
+  position: absolute;
+  bottom: 2px;      /* en vez de top */
+  right: 2px;       /* pegado a la derecha */
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 5px;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }

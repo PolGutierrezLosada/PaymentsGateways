@@ -3,7 +3,7 @@ import './Product.css';
 // esta clase se encarga de mostrar un producto individual con todas sus propiedades.
 export default function Product(props) {
   return (
-    <div className="product-card">
+    <div className="product-card" onClick={() => props.onClick(props.product)}>
       <img
         src={props.product.productUrl}
         alt={props.product.productName}
@@ -15,9 +15,3 @@ export default function Product(props) {
     </div>
   );
 }
-
-/*
-- imagen
-- precio
-- nombre
-*/

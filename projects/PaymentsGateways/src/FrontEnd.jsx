@@ -3,6 +3,8 @@ import React from 'react'
 import CartButton from './CartButton.jsx'
 import Product from './Product.jsx'
 
+import { useState } from 'react'
+
 import './FrontEnd.css'
 
 // constant that stores the products of the store.
@@ -33,14 +35,29 @@ const thirdProduct = products[2];
 
 // in this class, there is going to be everything related with the view of the page.
 export default function FrontEnd() {
+    // variable that counts the number of products in the cart.
+    const [cartCount, setCartCount] = useState(0);
+
+    // array that contains all the products that have been added to the cart.
+    const [cart, setCart] = useState([]);
+
+    // function that handles the click on a product.
+    function handleClick(product) {
+        // I do copy the previous cart and add the new product to it.
+        setCart([...cart, product]);
+        // I increase the cart count by 1.
+        setCartCount(cartCount + 1);
+        console.log(cartCount);
+    }
+
   return (
     <div>
-        <CartButton />
+        <CartButton cartCount={cartCount} />
 
         <div className="products-container">
-            <Product product={firstProduct} />
-            <Product product={secondProduct} />
-            <Product product={thirdProduct} />
+            <Product product={firstProduct} onClick={handleClick} />
+            <Product product={secondProduct} onClick={handleClick} />
+            <Product product={thirdProduct} onClick={handleClick} />
         </div>
     </div>
   )

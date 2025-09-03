@@ -1,10 +1,23 @@
 .product-card {
-  background-color: #1e1e1e; /* negro claro */
-  border-radius: 12px;       /* bordes redondeados */
+  background-color: #1e1e1e;
+  border-radius: 12px;
   padding: 1rem;
-  text-align: center;        /* centra el contenido */
-  width: 250px;              /* ancho fijo opcional */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* sombra ligera */
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.15s ease; /* 👈 agrega esto */
+}
+
+/* Efecto hover */
+.product-card:hover {
+  background-color: #00a38d;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.product-card:active {
+  transform: scale(1.1);  /* se agranda un poco más que el hover */
+  transition: transform 0.1s ease; /* animación rápida */
 }
 
 .product-image {
