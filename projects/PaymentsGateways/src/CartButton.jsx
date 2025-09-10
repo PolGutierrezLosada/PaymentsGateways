@@ -19,11 +19,11 @@ export default function CartButton(props) {
     // use effect that navigates to the cart page when the button is clicked.
     useEffect(() => {
         if (buttonClicked) {
-            navigate('/cart');
+            navigate('/cart', { state: { productsList: props.cart } });
             // I reset the button clicked state to false.
             setButtonClicked(false);
         }
-    }, [buttonClicked]);
+    }, [buttonClicked, navigate, props.cart]);
 
   return (
     <div className="cart-container">

@@ -1,0 +1,79 @@
+.cart-wrapper {
+  width: 50%;
+  margin-left: 0;
+  margin-right: auto;  /* el resto queda libre */
+  padding: 2rem;
+  box-sizing: border-box; /* para que el padding no sume extra */
+}
+
+.cart-title {
+  font-size: 1.8rem;
+  color: #00c7a6;
+  margin-bottom: 1.5rem;
+  text-align: center;      /* centrado respecto al wrapper */
+}
+
+.cart-container-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;      /* centramos verticalmente la imagen con el texto */
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;   /* nombre arriba, precio debajo */
+  justify-content: center;
+  flex: 1;
+  color: #fff;
+}
+
+.cart-item-info h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.cart-item-price {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.cart-item-remove {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #ff5555;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cart-item-remove:hover {
+  color: #ff2222;
+}
+
+.cart-item-quantity {
+  position: absolute;
+  bottom: 8px;   /* separación desde abajo */
+  right: 12px;   /* separación desde la derecha */
+  font-size: 0.8rem;
+  color: #aaa;   /* o el color que quieras */
+}

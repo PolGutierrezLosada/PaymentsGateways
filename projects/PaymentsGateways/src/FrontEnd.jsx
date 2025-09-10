@@ -52,7 +52,7 @@ export default function FrontEnd() {
 
   return (
     <div>
-        <CartButton cartCount={cartCount} />
+        <CartButton cartCount={cartCount} cart={cart} />
 
         <div className="products-container">
             <Product product={firstProduct} onClick={handleClick} />

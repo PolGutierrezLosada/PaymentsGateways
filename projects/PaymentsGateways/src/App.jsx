@@ -4,9 +4,11 @@ import viteLogo from '/vite.svg'
 
 import './App.css'
 import FrontEnd from './FrontEnd.jsx'
+//import PaymentSection from './PaymentSection.jsx'
 // import Backend from './Backend.java'
 
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import PaymentSection from './PaymentSection.jsx'
 
 // main class that contains all the application logic.
 function App() {
@@ -28,7 +30,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<FrontEnd />} />          
-          <Route path="/cart" element={<h1>Cart Page - Under Construction</h1>} />
+          <Route path="/cart" element={<PaymentSection />} />
         </Routes>
 
     </div>
@@ -36,3 +38,13 @@ function App() {
 }
 
 export default App
+
+
+/*
+- tareas pendientes:
+    - crear la pagina del carrito de la compra.
+    - integrar el backend con el frontend.
+
+    - ver como implementar la parte de stripe en el front.
+    - ver como pasar los datos del carrito hacia la nueva URL.
+*/
