@@ -5,6 +5,7 @@ import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.checkout.Session;
 import com.stripe.param.checkout.SessionCreateParams;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 // this class is for locating the endpoint that I'm going to use in the API:
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 public class PaymentController {
     private final Gson gson;
@@ -96,4 +98,12 @@ public class PaymentController {
 * mode
 * return url
 * success url
+* */
+
+/*
+* TO DO:
+* modificar el aspecto de la pagina web
+* cambiar la cantidades que se pasan desde el front
+* cambiar el listener para escuchar cada vez que cambie una cantidad
+* configurar las paginas de retorno
 * */

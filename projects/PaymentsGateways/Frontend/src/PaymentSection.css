@@ -1,16 +1,23 @@
+/* ----------- LAYOUT GENERAL ----------- */
+.page-wrapper {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* ----------- CARRITO (IZQUIERDA) ----------- */
 .cart-wrapper {
-  width: 50%;
-  margin-left: 0;
-  margin-right: auto;  /* el resto queda libre */
+  width: 100%;
   padding: 2rem;
-  box-sizing: border-box; /* para que el padding no sume extra */
+  box-sizing: border-box;
+  overflow-y: auto; /* scroll si hay muchos productos */
 }
 
 .cart-title {
   font-size: 1.8rem;
   color: #00c7a6;
   margin-bottom: 1.5rem;
-  text-align: center;      /* centrado respecto al wrapper */
+  text-align: center;
 }
 
 .cart-container-list {
@@ -21,11 +28,12 @@
 
 .cart-item {
   display: flex;
-  align-items: center;      /* centramos verticalmente la imagen con el texto */
+  align-items: center;
   background-color: #1e1e1e;
   border-radius: 8px;
   padding: 1rem;
   position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
 
 .cart-item img {
@@ -38,7 +46,7 @@
 
 .cart-item-info {
   display: flex;
-  flex-direction: column;   /* nombre arriba, precio debajo */
+  flex-direction: column;
   justify-content: center;
   flex: 1;
   color: #fff;
@@ -65,6 +73,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
 .cart-item-remove:hover {
   color: #ff2222;
@@ -72,8 +81,29 @@
 
 .cart-item-quantity {
   position: absolute;
-  bottom: 8px;   /* separación desde abajo */
-  right: 12px;   /* separación desde la derecha */
-  font-size: 0.8rem;
-  color: #aaa;   /* o el color que quieras */
+  bottom: 8px;
+  right: 12px;
+  font-size: 0.9rem;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-item-quantity button {
+  background-color: #2b2b2b;
+  border: 1px solid #555;
+  color: #fff;
+  font-size: 0.9rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-item-quantity button:hover {
+  background-color: #444;
 }
