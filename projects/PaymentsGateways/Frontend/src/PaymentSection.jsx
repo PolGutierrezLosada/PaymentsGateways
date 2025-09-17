@@ -118,7 +118,29 @@ export default function PaymentSection(props) {
 
     return (
         <div className="page-wrapper">
-            
+
+            <div className="cart-wrapper">
+                <h1 className="cart-title">Shopping Cart</h1>
+                <div className="cart-container-list">
+                    {cartItems.map((product, i) => (
+                        <div className="cart-item" key={i}> 
+                            <img src={product.productUrl} alt={product.productName} />
+                            <div className="cart-item-info">
+                                <h2>{product.productName}</h2>
+                                <p className="cart-item-price">{product.productPrice}</p>
+                            </div>
+                            <button className="cart-item-remove" onClick={() => handleDelete(product)}>×</button>
+                            <p className="cart-item-quantity">
+                                <button onClick={() => handleReduceClick(product)}>-</button>
+                                {product.productName == "Zapatillas" && zapatillasQuantity}
+                                {product.productName == "Móvil" && movilesQuantity}
+                                {product.productName == "Alfombra Felpudo" && alfombrasQuantity}
+                                <button onClick={() => handleIncreaseClick(product)}>+</button>
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
 
             <div className="checkout">
                 <EmbeddedCheckoutProvider
@@ -132,22 +154,3 @@ export default function PaymentSection(props) {
         
     );
 }
-
-
-
-/*
-* return (
-  <div className="page-wrapper">
-    <div className="cart-wrapper">
-      { ... carrito ... }
-    </div>
-
-    <div id="checkout">
-      <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
-        <EmbeddedCheckout />
-      </EmbeddedCheckoutProvider>
-    </div>
-  </div>
-);
-
-*/
