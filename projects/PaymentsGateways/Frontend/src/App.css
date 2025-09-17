@@ -1,11 +1,11 @@
 .app {
   display: flex;
-  flex-direction: column;    /* apila verticalmente */
-  align-items: center;       /* centra horizontalmente */
-  justify-content: center;   /* centra verticalmente */
-  height: 100vh;             /* ocupa toda la altura de la pantalla */
-  width: 100vw;              /* ocupa todo el ancho de la pantalla */
-  text-align: center;        /* centra el texto */
+  flex-direction: column;    /* sets all the items in a vertical way */
+  align-items: center;       /* centers horizontally */
+  justify-content: center;   /* centers vertically */
+  height: 100vh;             /* fills the entire sreen (height) */
+  width: 100vw;              /* fills the entire sreen (width) */
+  text-align: center;        /* centers the text */ 
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  margin: 0 auto;             /* centra horizontalmente */
+  margin: 0 auto;             /* centers horizontally */
   text-align: center;
   max-width: 600px;
   padding: 2rem;

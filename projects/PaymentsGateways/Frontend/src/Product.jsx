@@ -1,6 +1,6 @@
 import './Product.css';
 
-// esta clase se encarga de mostrar un producto individual con todas sus propiedades.
+// this class is in charge of showing an individual product with all its properties.
 export default function Product(props) {
   return (
     <div className="product-card" onClick={() => props.onClick(props.product)}>

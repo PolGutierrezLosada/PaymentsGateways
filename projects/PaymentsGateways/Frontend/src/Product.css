@@ -5,10 +5,10 @@
   text-align: center;
   width: 250px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  transition: all 0.15s ease; /* 👈 agrega esto */
+  transition: all 0.15s ease; 
 }
 
-/* Efecto hover */
+/* hover effect */
 .product-card:hover {
   background-color: #00a38d;
   transform: scale(1.05);
@@ -16,14 +16,14 @@
 }
 
 .product-card:active {
-  transform: scale(1.1);  /* se agranda un poco más que el hover */
-  transition: transform 0.1s ease; /* animación rápida */
+  transform: scale(1.1);  
+  transition: transform 0.1s ease; 
 }
 
 .product-image {
   width: 100%;
-  border-radius: 12px;       /* igual que el contenedor */
-  object-fit: cover;         /* evita deformación */
+  border-radius: 12px;      
+  object-fit: cover;        
 }
 
 .product-title {

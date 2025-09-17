@@ -28,22 +28,22 @@ export default function PaymentSection(props) {
     // now I create the object that does all this process:
     const options = {fetchClientSecret};
 
-    // Recupero lo que mandé con navigate:
+    // I retrieve what I sent with navigate:
     const location = useLocation();
-    // en caso de que no haya nada en el state, pongo productsList como un array vacío:
+    // if there is nothing in the state, I set productsList as an empty array:
     const productsList = location.state?.productsList || [];
 
-    // Conteos
+    // Counters:
     let zapatillasCount = 0;
     let movilesCount = 0;
     let alfombrasCount = 0;
 
-    // variables para las modificaciones de cantidad:
+    // variables that store the quantity of each product:
     const [zapatillasQuantity, setZapatillasQuantity] = useState(0);
     const [movilesQuantity, setMovilesQuantity] = useState(0);
     const [alfombrasQuantity, setAlfombrasQuantity] = useState(0);  
 
-    // Productos únicos en el orden en que aparecen
+    // array that stores the products without repetitions and in the order they appear:
     const orderedProducts = [];
 
     const [cartItems, setCartItems] = useState([]);
@@ -79,7 +79,7 @@ export default function PaymentSection(props) {
         setCartItems(orderedProducts);
     }, []); // Empty dependency array to run only once on mount
 
-    // Funciones para los botones + y -
+    // function for the buttons '+' and '-':
     function handleIncreaseClick(product) {
         if (product.productName === "Zapatillas") {
             setZapatillasQuantity(prev => prev + 1);
@@ -109,7 +109,7 @@ export default function PaymentSection(props) {
         }
     }
 
-    // función para eliminar el producto del carrito:
+    // function to delete a product from the cart:
     function handleDelete(product) {
         const newCart = [...cartItems];
         newCart.splice(newCart.indexOf(product), 1);

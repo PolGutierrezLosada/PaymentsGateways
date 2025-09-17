@@ -1,16 +1,16 @@
-/* ----------- LAYOUT GENERAL ----------- */
+/* ----------- GENERAL LAYOUT ----------- */
 .page-wrapper {
   width: 100%;
   height: auto;
   box-sizing: border-box;
 }
 
-/* ----------- CARRITO (IZQUIERDA) ----------- */
+/* ----------- CART (LEFT) ----------- */
 .cart-wrapper {
   width: 100%;
   padding: 2rem;
   box-sizing: border-box;
-  overflow-y: auto; /* scroll si hay muchos productos */
+  overflow-y: auto; /* scroll if there are more products */
 }
 
 .cart-title {

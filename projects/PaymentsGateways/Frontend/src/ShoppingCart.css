@@ -1,14 +1,14 @@
 /* Contenedor del botón (arriba a la derecha) */
 .cart-container {
-  position: fixed;         /* siempre visible */
-  top: 20px;               /* separación del borde superior */
-  right: 20px;             /* separación del borde derecho */
-  z-index: 1000;           /* por encima del resto de elementos */
+  position: fixed;         /* always visible */
+  top: 20px;               /* gap between the top border */
+  right: 20px;             /* gap between the right border */
+  z-index: 1000;           /* over the rest elements */
 }
 
-/* Botón del carrito */
+/* cart button */
 .cart-button {
-  position: relative; /* <-- agrega esto */
+  position: relative; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,14 +26,13 @@
 }
 
 
-/* Efecto hover */
+/* hover effect */
 .cart-button:hover {
   background-color: #00a38d;
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Si quieres que solo sea un icono redondo */
 .cart-icon-button {
   width: 50px;
   height: 50px;
@@ -50,8 +49,8 @@
 
 .cart-count {
   position: absolute;
-  bottom: 2px;      /* en vez de top */
-  right: 2px;       /* pegado a la derecha */
+  bottom: 2px;      
+  right: 2px;       
   color: white;
   font-size: 0.7rem;
   font-weight: bold;
